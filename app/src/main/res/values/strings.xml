@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">"Astro Deep Sky Target Finder"</string>
+    <string name="lat">Latitude</string>
+    <string name="exLat">47.6062</string>
+    <string name="hintLat">Enter desired latitude.</string>
+
+    <string name="lon">Longitude</string>
+    <string name="exLon">-122.3321</string>
+    <string name="hintLon">Enter desired longitude.</string>
+
+    <string name="gx">Galaxy</string>
+    <string name="oc">Open star cluster</string>
+    <string name="gb">Globular star cluster</string>
+    <string name="br">Bright emission or reflection nebula</string>
+    <string name="pn">Planetary nebula</string>
+
+    <string name="tol">Tolerance (42–88):</string>
+    <string name="tolV">70</string>
+    <string name="tolHint">Enter desired tolerance.</string>
+
+    <string name="magTol">Enter Mag Tolerance:</string>
+    <string name="magTolV">10</string>
+
+    <string name="subButton">Submit</string>
+
+    <string name="first">Best Target: </string>
+    <string name="first2">Best Target: IC%1$s, Magnitude: %2$s</string>
+    <string name="first3">Best Target: NGC%1$s, Magnitude: %2$s</string>
+    <string name="first42">Constellation: </string>
+    <string name="first4">Constellation: %1$s, %2$s</string>
+    <string name="first5">%1$s</string>
+
+    <string name="second">2nd Best Target: </string>
+    <string name="second2">2nd Best Target: IC%1$s, Magnitude: %2$s</string>
+    <string name="second3">2nd Best Target: NGC%1$s, Magnitude: %2$s</string>
+    <string name="second42">Constellation: </string>
+    <string name="second4">Constellation: %1$s, %2$s</string>
+    <string name="second5">%1$s</string>
+
+    <string name="third">3rd Best Target: </string>
+    <string name="third2">3rd Best Target: IC%1$s, Magnitude: %2$s</string>
+    <string name="third3">3rd Best Target: NGC%1$s, Magnitude: %2$s</string>
+    <string name="third42">Constellation: </string>
+    <string name="third4">Constellation: %1$s, %2$s</string>
+    <string name="third5">%1$s</string>
+
+    <string name="fourth">4th Best Target: </string>
+    <string name="fourth2">4th Best Target: IC%1$s, Magnitude: %2$s</string>
+    <string name="fourth3">4th Best Target: NGC%1$s, Magnitude: %2$s</string>
+    <string name="fourth42">Constellation: </string>
+    <string name="fourth4">Constellation: %1$s, %2$s</string>
+    <string name="fourth5">%1$s</string>
+
+    <string name="fifth">5th Best Target: </string>
+    <string name="fifth2">5th Best Target: IC%1$s, Magnitude: %2$s</string>
+    <string name="fifth3">5th Best Target: NGC%1$s, Magnitude: %2$s</string>
+    <string name="fifth42">Constellation: </string>
+    <string name="fifth4">Constellation: %1$s, %2$s</string>
+    <string name="fifth5">%1$s</string>
+
+    <string name="noTargets">No targets found</string>
+    <string name="none">%1$s Best Target: None</string>
+
+    <string name="geo">Use GPS</string>
+    <string name="accept">Ok</string>
+
+    <string name="fifthDesc">Image of the 5th best target</string>
+    <string name="fourthDesc">Image of the 4th best target</string>
+    <string name="thirdDesc">Image of the 3rd best target</string>
+    <string name="secondDesc">Image of the 2nd best target</string>
+    <string name="firstDesc">Image of the best target</string>
+    <string name="pick_date">Pick Date</string>
+</resources>
