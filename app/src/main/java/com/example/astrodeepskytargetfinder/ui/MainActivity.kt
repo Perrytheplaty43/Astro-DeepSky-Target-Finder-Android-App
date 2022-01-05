@@ -219,17 +219,41 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Res", final.toString())
 
                 uiThread {
+                    var mag0 = final[0][2]
+                    if (mag0 == "") {
+                        mag0 = "N/A"
+                    }
+
+                    var mag1 = final[1][2]
+                    if (mag1 == "") {
+                        mag1 = "N/A"
+                    }
+
+                    var mag2 = final[2][2]
+                    if (mag2 == "") {
+                        mag2 = "N/A"
+                    }
+
+                    var mag3 = final[3][2]
+                    if (mag3 == "") {
+                        mag3 = "N/A"
+                    }
+
+                    var mag4 = final[4][2]
+                    if (mag4 == "") {
+                        mag4 = "N/A"
+                    }
                     when {
                         final.size >= 5 -> {
                             val firstTitle = findViewById<TextView>(R.id.textView2)
                             if (final[0][0].contains("I")) {
                                 firstTitle.text =
-                                    getString(R.string.first2, final[0][0].drop(1), final[0][2])
+                                    getString(R.string.first2, final[0][0].drop(1), mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[0][0].drop(1) + ".jpg")
                                     .into(firstImage)
                             } else {
-                                firstTitle.text = getString(R.string.first3, final[0][0], final[0][2])
+                                firstTitle.text = getString(R.string.first3, final[0][0], mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[0][0] + ".jpg")
                                     .into(firstImage)
@@ -241,12 +265,12 @@ class MainActivity : AppCompatActivity() {
                             val secondTitle = findViewById<TextView>(R.id.textView22)
                             if (final[1][0].contains("I")) {
                                 secondTitle.text =
-                                    getString(R.string.second2, final[1][0].drop(1), final[1][2])
+                                    getString(R.string.second2, final[1][0].drop(1), mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[1][0].drop(1) + ".jpg")
                                     .into(secondImage)
                             } else {
-                                secondTitle.text = getString(R.string.second3, final[1][0], final[1][2])
+                                secondTitle.text = getString(R.string.second3, final[1][0], mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[1][0] + ".jpg")
                                     .into(secondImage)
@@ -258,12 +282,12 @@ class MainActivity : AppCompatActivity() {
                             val thirdTitle = findViewById<TextView>(R.id.textView23)
                             if (final[2][0].contains("I")) {
                                 thirdTitle.text =
-                                    getString(R.string.third2, final[2][0].drop(1), final[2][2])
+                                    getString(R.string.third2, final[2][0].drop(1), mag2)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[2][0].drop(1) + ".jpg")
                                     .into(thirdImage)
                             } else {
-                                thirdTitle.text = getString(R.string.third3, final[2][0], final[2][2])
+                                thirdTitle.text = getString(R.string.third3, final[2][0], mag2)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[2][0] + ".jpg")
                                     .into(thirdImage)
@@ -275,12 +299,12 @@ class MainActivity : AppCompatActivity() {
                             val fourthTitle = findViewById<TextView>(R.id.textView24)
                             if (final[3][0].contains("I")) {
                                 fourthTitle.text =
-                                    getString(R.string.fourth2, final[3][0].drop(1), final[3][2])
+                                    getString(R.string.fourth2, final[3][0].drop(1), mag3)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[3][0].drop(1) + ".jpg")
                                     .into(fourthImage)
                             } else {
-                                fourthTitle.text = getString(R.string.fourth3, final[3][0], final[3][2])
+                                fourthTitle.text = getString(R.string.fourth3, final[3][0], mag3)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[3][0] + ".jpg")
                                     .into(fourthImage)
@@ -292,12 +316,12 @@ class MainActivity : AppCompatActivity() {
                             val fifthTitle = findViewById<TextView>(R.id.textView25)
                             if (final[4][0].contains("I")) {
                                 fifthTitle.text =
-                                    getString(R.string.fifth2, final[4][0].drop(1), final[4][2])
+                                    getString(R.string.fifth2, final[4][0].drop(1), mag4)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[4][0].drop(1) + ".jpg")
                                     .into(fifthImage)
                             } else {
-                                fifthTitle.text = getString(R.string.fifth3, final[4][0], final[4][2])
+                                fifthTitle.text = getString(R.string.fifth3, final[4][0], mag4)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[4][0] + ".jpg")
                                     .into(fifthImage)
@@ -309,12 +333,12 @@ class MainActivity : AppCompatActivity() {
                             val firstTitle = findViewById<TextView>(R.id.textView2)
                             if (final[0][0].contains("I")) {
                                 firstTitle.text =
-                                    getString(R.string.first2, final[0][0].drop(1), final[0][2])
+                                    getString(R.string.first2, final[0][0].drop(1), mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[0][0].drop(1) + ".jpg")
                                     .into(firstImage)
                             } else {
-                                firstTitle.text = getString(R.string.first3, final[0][0], final[0][2])
+                                firstTitle.text = getString(R.string.first3, final[0][0], mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[0][0] + ".jpg")
                                     .into(firstImage)
@@ -326,12 +350,12 @@ class MainActivity : AppCompatActivity() {
                             val secondTitle = findViewById<TextView>(R.id.textView22)
                             if (final[1][0].contains("I")) {
                                 secondTitle.text =
-                                    getString(R.string.second2, final[1][0].drop(1), final[1][2])
+                                    getString(R.string.second2, final[1][0].drop(1), mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[1][0].drop(1) + ".jpg")
                                     .into(secondImage)
                             } else {
-                                secondTitle.text = getString(R.string.second3, final[1][0], final[1][2])
+                                secondTitle.text = getString(R.string.second3, final[1][0], mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[1][0] + ".jpg")
                                     .into(secondImage)
@@ -343,12 +367,12 @@ class MainActivity : AppCompatActivity() {
                             val thirdTitle = findViewById<TextView>(R.id.textView23)
                             if (final[2][0].contains("I")) {
                                 thirdTitle.text =
-                                    getString(R.string.third2, final[2][0].drop(1), final[2][2])
+                                    getString(R.string.third2, final[2][0].drop(1), mag2)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[2][0].drop(1) + ".jpg")
                                     .into(thirdImage)
                             } else {
-                                thirdTitle.text = getString(R.string.third3, final[2][0], final[2][2])
+                                thirdTitle.text = getString(R.string.third3, final[2][0], mag2)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[2][0] + ".jpg")
                                     .into(thirdImage)
@@ -360,12 +384,12 @@ class MainActivity : AppCompatActivity() {
                             val fourthTitle = findViewById<TextView>(R.id.textView24)
                             if (final[3][0].contains("I")) {
                                 fourthTitle.text =
-                                    getString(R.string.fourth2, final[3][0].drop(1), final[3][2])
+                                    getString(R.string.fourth2, final[3][0].drop(1), mag3)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[3][0].drop(1) + ".jpg")
                                     .into(fourthImage)
                             } else {
-                                fourthTitle.text = getString(R.string.fourth3, final[3][0], final[3][2])
+                                fourthTitle.text = getString(R.string.fourth3, final[3][0], mag3)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[3][0] + ".jpg")
                                     .into(fourthImage)
@@ -385,12 +409,12 @@ class MainActivity : AppCompatActivity() {
                             val firstTitle = findViewById<TextView>(R.id.textView2)
                             if (final[0][0].contains("I")) {
                                 firstTitle.text =
-                                    getString(R.string.first2, final[0][0].drop(1), final[0][2])
+                                    getString(R.string.first2, final[0][0].drop(1), mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[0][0].drop(1) + ".jpg")
                                     .into(firstImage)
                             } else {
-                                firstTitle.text = getString(R.string.first3, final[0][0], final[0][2])
+                                firstTitle.text = getString(R.string.first3, final[0][0], mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[0][0] + ".jpg")
                                     .into(firstImage)
@@ -402,12 +426,12 @@ class MainActivity : AppCompatActivity() {
                             val secondTitle = findViewById<TextView>(R.id.textView22)
                             if (final[1][0].contains("I")) {
                                 secondTitle.text =
-                                    getString(R.string.second2, final[1][0].drop(1), final[1][2])
+                                    getString(R.string.second2, final[1][0].drop(1), mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[1][0].drop(1) + ".jpg")
                                     .into(secondImage)
                             } else {
-                                secondTitle.text = getString(R.string.second3, final[1][0], final[1][2])
+                                secondTitle.text = getString(R.string.second3, final[1][0], mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[1][0] + ".jpg")
                                     .into(secondImage)
@@ -419,12 +443,12 @@ class MainActivity : AppCompatActivity() {
                             val thirdTitle = findViewById<TextView>(R.id.textView23)
                             if (final[2][0].contains("I")) {
                                 thirdTitle.text =
-                                    getString(R.string.third2, final[2][0].drop(1), final[2][2])
+                                    getString(R.string.third2, final[2][0].drop(1), mag2)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[2][0].drop(1) + ".jpg")
                                     .into(thirdImage)
                             } else {
-                                thirdTitle.text = getString(R.string.third3, final[2][0], final[2][2])
+                                thirdTitle.text = getString(R.string.third3, final[2][0], mag2)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[2][0] + ".jpg")
                                     .into(thirdImage)
@@ -450,12 +474,12 @@ class MainActivity : AppCompatActivity() {
                             val firstTitle = findViewById<TextView>(R.id.textView2)
                             if (final[0][0].contains("I")) {
                                 firstTitle.text =
-                                    getString(R.string.first2, final[0][0].drop(1), final[0][2])
+                                    getString(R.string.first2, final[0][0].drop(1), mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[0][0].drop(1) + ".jpg")
                                     .into(firstImage)
                             } else {
-                                firstTitle.text = getString(R.string.first3, final[0][0], final[0][2])
+                                firstTitle.text = getString(R.string.first3, final[0][0], mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[0][0] + ".jpg")
                                     .into(firstImage)
@@ -467,12 +491,12 @@ class MainActivity : AppCompatActivity() {
                             val secondTitle = findViewById<TextView>(R.id.textView22)
                             if (final[1][0].contains("I")) {
                                 secondTitle.text =
-                                    getString(R.string.second2, final[1][0].drop(1), final[1][2])
+                                    getString(R.string.second2, final[1][0].drop(1), mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[1][0].drop(1) + ".jpg")
                                     .into(secondImage)
                             } else {
-                                secondTitle.text = getString(R.string.second3, final[1][0], final[1][2])
+                                secondTitle.text = getString(R.string.second3, final[1][0], mag1)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[1][0] + ".jpg")
                                     .into(secondImage)
@@ -506,12 +530,12 @@ class MainActivity : AppCompatActivity() {
                             val firstTitle = findViewById<TextView>(R.id.textView2)
                             if (final[0][0].contains("I")) {
                                 firstTitle.text =
-                                    getString(R.string.first2, final[0][0].drop(1), final[0][2])
+                                    getString(R.string.first2, final[0][0].drop(1), mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/IC" + final[0][0].drop(1) + ".jpg")
                                     .into(firstImage)
                             } else {
-                                firstTitle.text = getString(R.string.first3, final[0][0], final[0][2])
+                                firstTitle.text = getString(R.string.first3, final[0][0], mag0)
                                 Glide.with(that)
                                     .load("https://athesto.ddns.net/Images/NGC" + final[0][0] + ".jpg")
                                     .into(firstImage)
