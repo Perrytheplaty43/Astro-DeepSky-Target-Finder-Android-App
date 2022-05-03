@@ -3,24 +3,29 @@ package com.example.astrodeepskytargetfinder.ui
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSmoothScroller
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.SmoothScroller
 import com.bumptech.glide.Glide
 import com.example.astrodeepskytargetfinder.R
 import com.example.astrodeepskytargetfinder.data.Request
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.datepicker.MaterialDatePicker
-import kotlinx.coroutines.*
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.uiThread
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.find
+import org.jetbrains.anko.uiThread
 import java.util.*
+import kotlin.math.abs
 import kotlin.math.round
 
 
@@ -235,6 +240,9 @@ class MainActivity : AppCompatActivity() {
                 Log.d("Res", final.toString())
 
                 uiThread {
+                    find<ScrollView>(R.id.scrollView).smoothScrollTo(0,
+                        find<Button>(R.id.submit).y.toInt()
+                    )
                     var mag0 = ""
                     var mag1 = ""
                     var mag2 = ""
