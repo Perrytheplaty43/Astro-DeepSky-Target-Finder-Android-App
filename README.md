@@ -1,8 +1,8 @@
 
 # Algorithums and Astronomy Calculator App
 
-This is the android app for the algorithm running at (athesto.ddns.net)[https://athesto.ddns.net/astroTargetFinder]
-the repository for which is at: (Algorithms-and-Astronomy-Calculator)[https://github.com/Perrytheplaty43/Algorithms-and-Astronomy-Calculator]
+This is the android app for the algorithm running at [athesto.ddns.net](https://athesto.ddns.net/astroTargetFinder)
+the repository for which is at: [Algorithms-and-Astronomy-Calculator](https://github.com/Perrytheplaty43/Algorithms-and-Astronomy-Calculator)
 Any contribution is welcome. The app is up on the Google playstore.
 
 
