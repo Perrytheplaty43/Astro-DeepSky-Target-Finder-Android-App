@@ -24,6 +24,7 @@
     <string name="subButton">Submit</string>
 
     <string name="first">Best Target: </string>
+    <string name="score1" />
     <string name="first2">Best Target: IC%1$s, Magnitude: %2$s</string>
     <string name="first3">Best Target: NGC%1$s, Magnitude: %2$s</string>
     <string name="first42">Constellation: </string>

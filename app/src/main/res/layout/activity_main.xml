@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -225,6 +226,25 @@
                 android:text="@string/fifth42"
                 android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/textViewScore5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/helveticabold"
+                android:text=""
+                android:elevation="1dp"
+                android:textColor="@android:color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="9"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textIsSelectable="true"
+                android:textSize="25sp" />
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -253,6 +273,25 @@
                 android:textIsSelectable="true"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/textViewScore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/helveticabold"
+                android:text="@string/score1"
+                android:elevation="1dp"
+                android:textColor="@android:color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="9"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textIsSelectable="true"
+                android:textSize="25sp" />
+
             <ImageView
                 android:id="@+id/imageViewFirst"
                 android:layout_width="wrap_content"
@@ -274,6 +313,8 @@
                 android:text="@string/first42"
                 android:textIsSelectable="true"
                 android:textSize="16sp" />
+
+
 
         </androidx.cardview.widget.CardView>
 
@@ -320,6 +361,25 @@
                 android:text="@string/second42"
                 android:textIsSelectable="true"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewScore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/helveticabold"
+                android:text=""
+                android:elevation="1dp"
+                android:textColor="@android:color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="9"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textIsSelectable="true"
+                android:textSize="25sp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -365,6 +425,25 @@
                 android:text="@string/third42"
                 android:textIsSelectable="true"
                 android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewScore3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/helveticabold"
+                android:text=""
+                android:elevation="1dp"
+                android:textColor="@android:color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="9"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textIsSelectable="true"
+                android:textSize="25sp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -410,6 +489,24 @@
                 android:text="@string/fourth42"
                 android:textIsSelectable="true"
                 android:textSize="16sp" />
+            <TextView
+                android:id="@+id/textViewScore4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/helveticabold"
+                android:text=""
+                android:elevation="1dp"
+                android:textColor="@android:color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="9"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textIsSelectable="true"
+                android:textSize="25sp" />
         </androidx.cardview.widget.CardView>
 
         <ProgressBar
