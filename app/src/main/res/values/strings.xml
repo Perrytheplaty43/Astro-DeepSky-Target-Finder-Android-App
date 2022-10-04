@@ -63,7 +63,7 @@
     <string name="none">%1$s Best Target: None</string>
 
     <string name="geo">Use GPS</string>
-    <string name="accept">Ok</string>
+    <string name="accept">OK</string>
 
     <string name="fifthDesc">Image of the 5th best target</string>
     <string name="fourthDesc">Image of the 4th best target</string>

@@ -10,10 +10,6 @@ import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSmoothScroller
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.SmoothScroller
 import com.bumptech.glide.Glide
 import com.example.astrodeepskytargetfinder.R
 import com.example.astrodeepskytargetfinder.data.Request
@@ -25,7 +21,6 @@ import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.find
 import org.jetbrains.anko.uiThread
 import java.util.*
-import kotlin.math.abs
 import kotlin.math.round
 
 
@@ -160,12 +155,12 @@ class MainActivity : AppCompatActivity() {
             type += "CpN,Ast,Kt,TS,DS,SS,Q,U,D,PD"
 
             Log.d("TYPE:", type)
-            val url = "https://athesto.ddns.net/astro?lat=" + lat.text.toString() + "&long=" + long.text.toString() + "&tol=" + editText.text.toString() + "&tolMag=" + magTol.text.toString() + "&type=" + type + "&date=" + date
+            val url = "https://athesto.ddns.net/astro?lat=" + lat.text.toString() + "&long=" + long.text.toString() + "&tol=" + editText.text.toString() + "&tolMag=" + magTol.text.toString() + "&type=" + type + "&date=" + date + "&sortByVis=true"
             Log.d("URL:", url)
             doAsync {
                 val dataJ = Request(url).run().split("[")
                 Log.d("Res1", dataJ.toString())
-                val DATA = dataJ.toString()
+                dataJ.toString()
                 if (dataJ.toString() == "[, \"null\",, ]]]") {
                     uiThread {
                         val score1 = findViewById<TextView>(R.id.textViewScore1)
@@ -348,7 +343,7 @@ class MainActivity : AppCompatActivity() {
                             val firstConst = findViewById<TextView>(R.id.textView6)
                             firstConst.text = getString(R.string.first4, final[0][4], final[0][3])
                             val score1 = findViewById<TextView>(R.id.textViewScore1)
-                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString();
+                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString()
 
                             //-------------------------------------------------------------------------------------------------------------------------
                             val secondTitle = findViewById<TextView>(R.id.textView22)
@@ -368,7 +363,7 @@ class MainActivity : AppCompatActivity() {
                             secondConst.text = getString(R.string.second4, final[1][4], final[1][3])
 
                             val score2 = findViewById<TextView>(R.id.textViewScore2)
-                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString();
+                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString()
                             //-------------------------------------------------------------------------------------------------------------------------
                             val thirdTitle = findViewById<TextView>(R.id.textView23)
                             if (final[2][0].contains("I")) {
@@ -387,7 +382,7 @@ class MainActivity : AppCompatActivity() {
                             thirdConst.text = getString(R.string.third4, final[2][4], final[2][3])
 
                             val score3 = findViewById<TextView>(R.id.textViewScore3)
-                            score3.text = "Score: " + (round( final[2][5].toFloat() * 100) / 100).toString();
+                            score3.text = "Score: " + (round( final[2][5].toFloat() * 100) / 100).toString()
 
                             //-------------------------------------------------------------------------------------------------------------------------
                             val fourthTitle = findViewById<TextView>(R.id.textView24)
@@ -407,7 +402,7 @@ class MainActivity : AppCompatActivity() {
                             fourthConst.text = getString(R.string.fourth4, final[3][4], final[3][3])
 
                             val score4 = findViewById<TextView>(R.id.textViewScore4)
-                            score4.text = "Score: " + (round( final[3][5].toFloat() * 100) / 100).toString();
+                            score4.text = "Score: " + (round( final[3][5].toFloat() * 100) / 100).toString()
 
                             //-------------------------------------------------------------------------------------------------------------------------
                             val fifthTitle = findViewById<TextView>(R.id.textView25)
@@ -426,7 +421,7 @@ class MainActivity : AppCompatActivity() {
                             val fifthConst = findViewById<TextView>(R.id.textView65)
                             fifthConst.text = getString(R.string.fifth4, final[4][4], final[4][3])
                             val score5 = findViewById<TextView>(R.id.textViewScore5)
-                            score5.text = "Score: " + (round( final[4][5].toFloat() * 100) / 100).toString();
+                            score5.text = "Score: " + (round( final[4][5].toFloat() * 100) / 100).toString()
                         }
                         final.size == 4 -> {
                             val firstTitle = findViewById<TextView>(R.id.textView2)
@@ -445,7 +440,7 @@ class MainActivity : AppCompatActivity() {
                             val firstConst = findViewById<TextView>(R.id.textView6)
                             firstConst.text = getString(R.string.first4, final[0][4], final[0][3])
                             val score1 = findViewById<TextView>(R.id.textViewScore1)
-                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString();
+                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString()
 
                             //-------------------------------------------------------------------------------------------------------------------------
                             val secondTitle = findViewById<TextView>(R.id.textView22)
@@ -464,7 +459,7 @@ class MainActivity : AppCompatActivity() {
                             val secondConst = findViewById<TextView>(R.id.textView62)
                             secondConst.text = getString(R.string.second4, final[1][4], final[1][3])
                             val score2 = findViewById<TextView>(R.id.textViewScore2)
-                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString();
+                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString()
                             //-------------------------------------------------------------------------------------------------------------------------
                             val thirdTitle = findViewById<TextView>(R.id.textView23)
                             if (final[2][0].contains("I")) {
@@ -483,7 +478,7 @@ class MainActivity : AppCompatActivity() {
                             thirdConst.text = getString(R.string.third4, final[2][4], final[2][3])
 
                             val score3 = findViewById<TextView>(R.id.textViewScore3)
-                            score3.text = "Score: " + (round( final[2][5].toFloat() * 100) / 100).toString();
+                            score3.text = "Score: " + (round( final[2][5].toFloat() * 100) / 100).toString()
                             //-------------------------------------------------------------------------------------------------------------------------
                             val fourthTitle = findViewById<TextView>(R.id.textView24)
                             if (final[3][0].contains("I")) {
@@ -505,7 +500,7 @@ class MainActivity : AppCompatActivity() {
                             fifthConst.text = getString(R.string.none, "5th")
 
                             val score4 = findViewById<TextView>(R.id.textViewScore4)
-                            score4.text = "Score: " + (round( final[3][5].toFloat() * 100) / 100).toString();
+                            score4.text = "Score: " + (round( final[3][5].toFloat() * 100) / 100).toString()
 
                             Glide.clear(fifthImage)
 
@@ -531,7 +526,7 @@ class MainActivity : AppCompatActivity() {
                             val firstConst = findViewById<TextView>(R.id.textView6)
                             firstConst.text = getString(R.string.first4, final[0][4], final[0][3])
                             val score1 = findViewById<TextView>(R.id.textViewScore1)
-                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString();
+                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString()
                             //-------------------------------------------------------------------------------------------------------------------------
                             val secondTitle = findViewById<TextView>(R.id.textView22)
                             if (final[1][0].contains("I")) {
@@ -549,7 +544,7 @@ class MainActivity : AppCompatActivity() {
                             val secondConst = findViewById<TextView>(R.id.textView62)
                             secondConst.text = getString(R.string.second4, final[1][4], final[1][3])
                             val score2 = findViewById<TextView>(R.id.textViewScore2)
-                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString();
+                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString()
                             //-------------------------------------------------------------------------------------------------------------------------
                             val thirdTitle = findViewById<TextView>(R.id.textView23)
                             if (final[2][0].contains("I")) {
@@ -565,7 +560,7 @@ class MainActivity : AppCompatActivity() {
                                     .into(thirdImage)
                             }
                             val score3 = findViewById<TextView>(R.id.textViewScore3)
-                            score3.text = "Score: " + (round( final[2][5].toFloat() * 100) / 100).toString();
+                            score3.text = "Score: " + (round( final[2][5].toFloat() * 100) / 100).toString()
                             val thirdConst = findViewById<TextView>(R.id.textView63)
                             thirdConst.text = getString(R.string.third4, final[2][4], final[2][3])
                             val fourthConst = findViewById<TextView>(R.id.textView24)
@@ -605,7 +600,7 @@ class MainActivity : AppCompatActivity() {
                             val firstConst = findViewById<TextView>(R.id.textView6)
                             firstConst.text = getString(R.string.first4, final[0][4], final[0][3])
                             val score1 = findViewById<TextView>(R.id.textViewScore1)
-                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString();
+                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString()
                             //-------------------------------------------------------------------------------------------------------------------------
                             val secondTitle = findViewById<TextView>(R.id.textView22)
                             if (final[1][0].contains("I")) {
@@ -621,7 +616,7 @@ class MainActivity : AppCompatActivity() {
                                     .into(secondImage)
                             }
                             val score2 = findViewById<TextView>(R.id.textViewScore2)
-                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString();
+                            score2.text = "Score: " + (round( final[1][5].toFloat() * 100) / 100).toString()
                             val secondConst = findViewById<TextView>(R.id.textView62)
                             secondConst.text = getString(R.string.second4, final[1][4], final[1][3])
 
@@ -669,7 +664,7 @@ class MainActivity : AppCompatActivity() {
                                     .into(firstImage)
                             }
                             val score1 = findViewById<TextView>(R.id.textViewScore1)
-                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString();
+                            score1.text = "Score: " + (round( final[0][5].toFloat() * 100) / 100).toString()
                             val firstConst = findViewById<TextView>(R.id.textView6)
                             firstConst.text = getString(R.string.first4, final[0][4], final[0][3])
 
